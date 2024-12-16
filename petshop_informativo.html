@@ -18,6 +18,17 @@
             padding: 20px;
             text-align: center;
         }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #008000;
+            font-weight: bold;
+        }
         .container {
             padding: 20px;
         }
@@ -33,6 +44,28 @@
             border: 1px solid #c3e6c3;
             border-radius: 5px;
         }
+        .products, .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: calc(33.333% - 20px);
+            background-color: white;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .card h3 {
+            margin: 10px 0;
+            color: #008000;
+        }
         footer {
             background-color: #008000;
             color: white;
@@ -47,30 +80,62 @@
         <h1>Bem-vindo ao PetShop Informativo</h1>
     </header>
 
+    <nav>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
     <div class="container">
-        <div class="info-section">
+        <div id="sobre" class="info-section">
             <h2>Sobre Nós</h2>
             <p>Somos um petshop dedicado a cuidar do seu melhor amigo! Oferecemos serviços de qualidade para todas as raças e portes.</p>
         </div>
 
-        <div class="info-section">
-            <h2>Serviços e Preços</h2>
-            <ul>
-                <li>Tosa de pequeno porte: <strong>R$ 20,00</strong></li>
-                <li>Tosa de médio porte: <strong>R$ 50,00</strong></li>
-                <li>Tosa de grande porte: <strong>R$ 100,00</strong></li>
-            </ul>
+        <div id="servicos" class="info-section">
+            <h2>Nossos Serviços</h2>
+            <div class="services">
+                <div class="card">
+                    <h3>Tosa de Pequeno Porte</h3>
+                    <p>R$ 20,00</p>
+                </div>
+                <div class="card">
+                    <h3>Tosa de Médio Porte</h3>
+                    <p>R$ 50,00</p>
+                </div>
+                <div class="card">
+                    <h3>Tosa de Grande Porte</h3>
+                    <p>R$ 100,00</p>
+                </div>
+            </div>
         </div>
 
-        <div class="info-section">
-            <h2>Informativos de Raças</h2>
-            <p><strong>Golden Retriever:</strong> Uma raça conhecida por ser amigável e inteligente, ideal para famílias.</p>
-            <p><strong>Shih Tzu:</strong> Pequenos, fofos e carinhosos, perfeitos para quem busca um companheiro tranquilo.</p>
+        <div id="produtos" class="info-section">
+            <h2>Nossos Produtos</h2>
+            <div class="products">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Ração Premium">
+                    <h3>Ração Premium</h3>
+                    <p>R$ 150,00</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Brinquedo para Pet">
+                    <h3>Brinquedo para Pet</h3>
+                    <p>R$ 30,00</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Cama Confortável">
+                    <h3>Cama Confortável</h3>
+                    <p>R$ 120,00</p>
+                </div>
+            </div>
         </div>
 
-        <div class="info-section contact">
+        <div id="contato" class="info-section contact">
             <h2>Contato</h2>
             <p>Telefone: <strong>(21) 99909-876</strong></p>
+            <p>Venha nos visitar e cuidar do seu pet com carinho!</p>
         </div>
     </div>
 
